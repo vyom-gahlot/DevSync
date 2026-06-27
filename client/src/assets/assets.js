@@ -1,4 +1,4 @@
-import dev_sync_logo from './dev_sync_logo';
+import dev_sync_favicon from './dev_sync_logo';
 
 
 
