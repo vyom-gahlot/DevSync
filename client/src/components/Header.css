@@ -1,8 +1,78 @@
 .header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0A0F1C;
     background-image: 
       linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
     background-size: 40px 40px;
+    color: #E5E7EB;
+}
 
+.header-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 8rem;
+  align-items: center;
+}
+
+.header-heading{
+  font-weight: 900;
+  font-size: 3rem;
+}
+.header-subheading{
+  font-size: 1.2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6EE7B7, #3B82F6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.join-room-button{
+  background-color: #3B82F6;
+  color: white;
+  padding-block: 1.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border-style: none;
+  font-weight: 700;
+  font-size: large;
+  transition: all 0.2s ease;
+}
+
+.create-room-button{
+  background-color: #3B82F6;
+  color: white;
+  padding-block: 1.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border-style: none;
+  font-weight: 700;
+  font-size: large;
+  transition: all 0.2s ease;
+}
+
+.join-room-button:hover{
+  background-color: #1e70f4;
+  transform: scale(1.05);
+}
+
+.create-room-button:hover{
+  background-color: #1e70f4;
+  transform: scale(1.05);
 }
