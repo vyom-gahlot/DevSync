@@ -17,8 +17,7 @@
     width: 120px;
     padding: 2rem; 
     margin-left: 2%;
-
-    pointer-events: inherit;
+    
 }
 
 .sign-in-button{
@@ -32,4 +31,31 @@
 
     font-weight: 500;
     font-size: medium;
+
+    background-color: #3B82F6;
+    color: white;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
 }
+
+.sign-in-button:hover{
+    background-color: #1e70f4;
+    transform: scale(1.05);
+}
+
+.navbar-bottom{
+    background-color: #010b1b;
+    display: flex;
+    color: white;
+    height: 3rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-bottom-options{
+    margin: 1rem;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
