@@ -9,7 +9,7 @@ const FeatureCard = ({feature}) => {
     <div className='feature-card'> 
     <div className='feature-heading'>
         <img src={image} className='feature-image' alt="" />
-        <h5 className='feature-title'>{title}</h5>
+        <h3 className='feature-title'>{title}</h3>
     </div>
     <div className='feature-text'>
         <p>{subtitle}</p>

@@ -1,0 +1,11 @@
+.feature-card{
+    background-color: ();
+
+}
+
+.feature-heading{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #E5E7EB;
+}
