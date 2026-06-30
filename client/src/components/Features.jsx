@@ -5,9 +5,9 @@ import './Features.css'
 
 const Features = () => {
   return (
-    <div>
+    <div className='features-container'>
       <div className="features-header">
-        <h2>Real-time collaboration, built for developers</h2>
+        <h2 className='features-heading'>Real-time collaboration, built for developers</h2>
         <p>Everything you need to code together — fast and synced.</p>
       </div>
 

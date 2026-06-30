@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import './Home.css'
 import Features from '../components/Features'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <Header/>
         <Features/>
       </div>
-      
+      <Footer/>
     </div>
   )
 }

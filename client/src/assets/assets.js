@@ -5,6 +5,7 @@ import cursor_feature from './cursor_feature.svg'
 import chat_feature from './chat_feature.svg'
 import language_feature from './language_feature.svg'
 import sync_feature from './sync_feature.svg'
+import live_preview_feature from './live_preview_feature.svg'
 
 
 export const assets = {
@@ -14,7 +15,8 @@ export const assets = {
     cursor_feature,
     chat_feature,
     language_feature,
-    sync_feature
+    sync_feature,
+    live_preview_feature
 }
 
 export const features =[
@@ -51,5 +53,12 @@ export const features =[
         "title": "Instant Sync",
         "subtitle": "Low latency collaboration that actually feels real-time",
         "image": sync_feature
+    },
+
+    {
+        "id": 6,
+        "title": "Live Preview",
+        "subtitle": "Run code and see output instantly",
+        "image": live_preview_feature
     }
 ]

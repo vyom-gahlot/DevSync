@@ -1,0 +1,29 @@
+.features-header{
+    color: #e5e7eb;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.features-heading{
+    font-size: 1.75rem;
+}
+
+.features-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.features-grid{
+    max-width: 60%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
