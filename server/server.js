@@ -1,12 +1,14 @@
 import express from 'express';
+import 'dotenv/config';
 import cors from 'cors';
 import { Socket } from 'socket.io';
 import dns from 'dns';
 import connectDB from './configs/db.js';
-import dotenv from 'dotenv';
+import signRouter from './routes/signRoutes.js';
+
 
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
-dotenv.config();
+
 
 
 const app = express();
@@ -21,6 +23,7 @@ app.use(express.json());
 
 //Routes
 app.get('/',(req,res)=>(res.send('API is working')));
+app.use('/api/auth', signRouter);
 
 const PORT = 3000;
 
