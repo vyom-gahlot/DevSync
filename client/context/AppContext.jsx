@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, createContext } from "react";
 import api from "../src/api/axios.js";
+import { jwtDecode } from "jwt-decode";
 
 const AppContext = createContext();
 
@@ -13,6 +14,29 @@ export const AppProvider = ({ children }) => {
       setToken(storedToken);
     }
   }, []);
+
+  useEffect(() => {
+    if (token) {
+      try {
+        const { exp } = jwtDecode(token);
+        const timeout = exp * 1000 - Date.now();
+
+        if (timeout <= 0) {
+          logout();
+          return;
+        }
+
+        const timer = setTimeout(() => {
+          logout();
+        }, timeout);
+
+        return () => clearTimeout(timer);
+
+      } catch (err) {
+        logout(); // invalid token safety
+      }
+    }
+  }, [token]);
 
   const login = (token) => {
     localStorage.setItem("token", token);

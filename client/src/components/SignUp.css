@@ -52,7 +52,8 @@
 }
 
 .signup-button {
-  width: 100%;
+  width: 50%;
+  min-width: 220px;
   padding: 12px;
   border-radius: 10px;
   border: none;
@@ -80,7 +81,8 @@
 }
 
 .email-input,
-.password-input {
+.password-input,
+.username-input {
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -88,7 +90,8 @@
 }
 
 .email-input input,
-.password-input input {
+.password-input input,
+.username-input input {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid #374151;
@@ -98,7 +101,8 @@
 }
 
 .email-input input:focus,
-.password-input input:focus {
+.password-input input:focus,
+.username-input input:focus {
   border-color: #7c3aed;
 }
 
