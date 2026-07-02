@@ -3,10 +3,11 @@ import './SignIn.css'
 import { useNavigate } from 'react-router-dom'
 import { useAppContext } from '../../context/AppContext';
 import toast from 'react-hot-toast';
+import api from '../api/axios.js';
 
 const SignIn = () => {
 
-  const{ axios, login, token} = useAppContext();
+  const{ login, token} = useAppContext(); 
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +19,7 @@ const SignIn = () => {
     e.preventDefault();
     setLoading(true)
     try {
-      const {data} = await axios.post('/api/auth/sign-in', {email, password});
+      const {data} = await api.post('/api/auth/sign-in', {email, password});
 
       if(data.success){
         login(data.token);
@@ -60,7 +61,7 @@ const SignIn = () => {
             <input onChange={e=>setPassword(e.target.value)} value={password} type="password" name="" placeholder='password' required />
           </div>
           <div className="signin-button-container">
-            <button type='submit' disabled={setLoading} className='signin-button'>{loading ? "Signing In" : "Sign In" }</button>
+            <button type='submit' disabled={loading} className='signin-button'>{loading ? "Signing In" : "Sign In" }</button>
           </div>
         </form>
       </div>
