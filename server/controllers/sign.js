@@ -5,6 +5,7 @@ import jwt from 'jsonwebtoken';
 export const signUp = async (req, res) => {
   try {
     const { username, email, password } = req.body;
+    console.log("REQ BODY:", req.body);
 
 
     if (!username || !email || !password) {
@@ -46,35 +47,56 @@ export const signUp = async (req, res) => {
   }
 };
 
+export const signIn = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-export const signIn = async (req, res) =>{
-    try {
-        const { email, password } = req.body;
-        
-        const user = await User.findOne({email});
+   
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and password are required"
+      });
+    }
 
-        if(!user){
-            return res.json({ success: false, message: "User not found" });
-        }
+   
+    const user = await User.findOne({ email });
 
-        const isMatch = await bcrypt.compare(password , user.password);
+    if (!user) {
+      return res.status(404).json({
+        success: false,
+        message: "User not found"
+      });
+    }
 
-        if (!isMatch) {
-            return res.json({ success: false, message: "Invalid credentials" });
-        }
+  
+    const isMatch = await bcrypt.compare(password, user.password);
 
-        const token = jwt.sign(
-            { id: newUser._id },
-            process.env.JWT_SECRET,
-            { expiresIn: "7d" }
-            );
-            
-        res.json({ success: true, message: "Login successful" });
+    if (!isMatch) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid credentials"
+      });
+    }
 
-    } catch (error) {
-        res.status(500).json({
+    
+    const token = jwt.sign(
+      { id: user._id }, 
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
+
+   
+    res.status(200).json({
+      success: true,
+      message: "Login successful",
+      token
+    });
+
+  } catch (error) {
+    res.status(500).json({
       success: false,
       message: error.message
     });
-    }
+  }
 };

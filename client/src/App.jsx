@@ -6,13 +6,19 @@ import JoinRoom from './pages/JoinRoom'
 import PageNotFound from './components/PageNotFound'
 import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
+import { useAppContext } from '../context/AppContext'
+import {Toaster} from 'react-hot-toast'
 
 
 
 
 const App = () => {
+
+  const {token} = useAppContext();
+
   return (
     <div>
+      <Toaster/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/create-room' element={<CreateRoom/>}/>
