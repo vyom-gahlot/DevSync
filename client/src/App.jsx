@@ -21,8 +21,8 @@ const App = () => {
       <Toaster/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/create-room' element={<CreateRoom/>}/>
-        <Route path='/join-room' element={<JoinRoom/>}/>
+        <Route path='/create-room' element={token ?  <CreateRoom/> : <SignIn/>}/>
+        <Route path='/join-room' element={ token ?  <JoinRoom/> : <SignIn/>}/>
         <Route path='/sign-in' element={<SignIn/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
 
