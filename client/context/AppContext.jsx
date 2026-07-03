@@ -46,7 +46,6 @@ export const AppProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("token");
     setToken(null);
-    window.location.href = "/sign-in"; 
   };
 
   const value = {

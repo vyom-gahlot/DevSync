@@ -8,6 +8,7 @@ import SignIn from './components/SignIn'
 import SignUp from './components/SignUp'
 import { useAppContext } from '../context/AppContext'
 import {Toaster} from 'react-hot-toast'
+import Room from './pages/Room'
 
 
 
@@ -25,7 +26,7 @@ const App = () => {
         <Route path='/join-room' element={ token ?  <JoinRoom/> : <SignIn/>}/>
         <Route path='/sign-in' element={<SignIn/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
-
+        <Route path='/room/:id' element= {token ? <Room/> : <SignIn/>}/>
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>
