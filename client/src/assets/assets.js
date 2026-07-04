@@ -6,6 +6,9 @@ import chat_feature from './chat_feature.svg'
 import language_feature from './language_feature.svg'
 import sync_feature from './sync_feature.svg'
 import live_preview_feature from './live_preview_feature.svg'
+import copy_room_id from './copy_room_id.svg'
+import copy_room from './copy_room.svg'
+import exit_room from './exit_room.svg'
 
 
 export const assets = {
@@ -16,7 +19,10 @@ export const assets = {
     chat_feature,
     language_feature,
     sync_feature,
-    live_preview_feature
+    live_preview_feature,
+    copy_room_id,
+    copy_room,
+    exit_room
 }
 
 export const features =[

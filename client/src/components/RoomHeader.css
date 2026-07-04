@@ -1,0 +1,185 @@
+.roomheader-container {
+  height: 64px;
+  width: 100%;
+  background: #0f172a;
+  border-bottom: 1px solid #1f2937;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+
+.roomheader-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0; 
+}
+
+.room-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+
+.header-seperation {
+  color: #475569;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.room-id {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #020617;
+  border: 1px solid #1f2937;
+  padding: 6px 10px;
+  border-radius: 8px;
+
+  min-width: 0;
+}
+
+.room-id-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.id-heading {
+  color: #64748b;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.id-content {
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 500;
+
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.room-id-copy {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  opacity: 0.7;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.room-id-copy:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
+.roomheader-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.header-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+
+.share-btn {
+  background: #111827;
+  color: #e2e8f0;
+  border: 1px solid #1f2937;
+}
+
+.share-btn:hover {
+  background: #1f2937;
+}
+
+
+.leave-btn {
+  background: #7f1d1d;
+  color: #fee2e2;
+}
+
+.leave-btn:hover {
+  background: #991b1b;
+}
+
+
+@media (max-width: 768px) {
+  .id-content {
+    max-width: 80px;
+  }
+
+  .header-btn {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .roomheader-container {
+    padding: 0 10px;
+  }
+
+
+  .id-heading {
+    display: none;
+  }
+
+  .id-content {
+    max-width: 70px;
+    font-size: 12px;
+  }
+
+  
+  .header-btn {
+    padding: 6px;
+    font-size: 0;
+  }
+
+  .header-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+ 
+  .roomheader-left {
+    gap: 8px;
+  }
+
+  .roomheader-right {
+    gap: 6px;
+  }
+}
