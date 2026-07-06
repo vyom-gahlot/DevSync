@@ -7,7 +7,7 @@ export const createRoom = async (req, res) =>{
         const roomId = uuidv4();
 
         rooms[roomId] = {
-            users : new Set()
+            users : {}
         }
 
         console.log("Room created:", roomId);

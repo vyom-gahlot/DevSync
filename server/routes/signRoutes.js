@@ -10,7 +10,7 @@ const signRouter = express.Router();
 signRouter.post("/sign-up", signUp);
 signRouter.post("/sign-in", signIn);
 
-// signRouter.get("/profile", auth, );
+
 
 
 

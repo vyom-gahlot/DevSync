@@ -33,7 +33,7 @@ export const AppProvider = ({ children }) => {
         return () => clearTimeout(timer);
 
       } catch (err) {
-        logout(); // invalid token safety
+        logout(); 
       }
     }
   }, [token]);

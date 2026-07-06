@@ -1,0 +1,31 @@
+.monaco-editor {
+  overflow: visible !important;
+}
+
+.cursor-widget {
+  position: relative;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-line {
+  width: 2px;
+  height: 18px;
+  position: absolute;
+  z-index: 9999;
+}
+
+.cursor-label {
+  position: absolute;
+  top: -25px;
+  left: 6px;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10000;
+
+
+  transform: translateZ(0);
+}
