@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './SignIn.css'
 import { useNavigate } from 'react-router-dom'
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../context/AppContext.jsx';
 import toast from 'react-hot-toast';
 import api from '../api/axios.js';
 

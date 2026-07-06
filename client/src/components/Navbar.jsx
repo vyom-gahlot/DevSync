@@ -2,7 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom'
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../context/AppContext';
 import toast from 'react-hot-toast';
 
 

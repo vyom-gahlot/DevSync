@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState, createContext } from "react";
-import api from "../src/api/axios.js";
+import api from "../api/axios.js";
 import { jwtDecode } from "jwt-decode";
 
 const AppContext = createContext();
