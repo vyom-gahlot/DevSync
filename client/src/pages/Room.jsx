@@ -4,7 +4,7 @@ import RoomHeader from "../components/RoomHeader";
 import Chat from "../components/Chat";
 import { useParams } from "react-router-dom";
 import CodeEditor from "../components/Editor.jsx";
-import { socket } from "../socket";
+import { socket } from "../Socket.js";
 
 const Room = () => {
   const { id: roomId } = useParams();
@@ -28,7 +28,7 @@ const Room = () => {
     };
   }, [roomId]);
 
-  // 🔥 SYNC LANGUAGE
+  
   useEffect(() => {
     const handler = ({ language }) => {
       setLanguage(language);
