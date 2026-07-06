@@ -79,7 +79,7 @@ devsync/
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/vyom-gahlot/devsync.git
+git clone https://github.com/vyom-gahlot/DevSync
 cd devsync
 ```
 
