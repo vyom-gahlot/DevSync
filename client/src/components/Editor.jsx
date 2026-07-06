@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Editor from "@monaco-editor/react";
-import { socket } from "../socket";
+import { socket } from "../Socket.js";
 import "./Editor.css";
 
 const CodeEditor = ({ roomId, language }) => {

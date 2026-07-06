@@ -1,6 +1,6 @@
 import React from "react";
 import "./RoomHeader.css";
-import { socket } from "../socket";
+import { socket } from "../Socket.js";
 import { useNavigate, useParams } from "react-router-dom";
 import { assets } from "../assets/assets";
 import toast from "react-hot-toast";
