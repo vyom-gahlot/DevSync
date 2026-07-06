@@ -6,7 +6,7 @@ import JoinRoom from './pages/JoinRoom.jsx'
 import PageNotFound from './components/PageNotFound.jsx'
 import SignIn from './components/SignIn.jsx'
 import SignUp from './components/SignUp.jsx'
-import { useAppContext } from '../context/AppContext.jsx'
+import { useAppContext } from './context/AppContext.jsx'
 import {Toaster} from 'react-hot-toast'
 import Room from './pages/Room.jsx'
 
