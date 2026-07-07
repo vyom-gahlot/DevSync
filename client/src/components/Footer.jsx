@@ -22,6 +22,7 @@ const Footer = () => {
         </div>
         <div className="github">
           <h4>Developer</h4>
+          <a href="https://portfolio-sandy-alpha-bks6lgnnzk.vercel.app/" target='_blank'> Portfolio</a>
           <a href="https://github.com/vyom-gahlot" target='_blank'>Github</a>
           <a href="https://github.com/vyom-gahlot/devsync.git" target="_blank">Source Code</a>
         </div>
